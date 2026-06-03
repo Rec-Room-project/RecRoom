@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rec Room Revival Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Fredoka:wght@700&display=swap" rel="stylesheet">
     <style>
         /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Fredoka', 'Segoe UI', sans-serif;
         }
 
         body {
@@ -28,30 +29,55 @@
         header {
             background-color: rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(5px);
-            padding: 1rem 2rem;
+            padding: 0.8rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 3px solid #ff5722; /* Rec Room Orange accent */
+            border-bottom: 4px solid #ff5722; /* Rec Room Orange accent */
         }
 
+        /* =========================================
+           REC ROOM STYLIZED LOGO
+           =========================================
+        */
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #ff5722;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-family: 'Bungee', sans-serif;
+            font-size: 1.4rem;
+            user-select: none;
+            /* Minor overall tilt for that classic Rec Room look */
+            transform: rotate(-2deg); 
         }
 
-        .logo span {
-            color: #fff;
+        .logo-rec, .logo-room {
+            padding: 4px 12px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.4);
         }
+
+        .logo-rec {
+            background-color: #ff5722; /* Signature Orange */
+            color: #ffffff;
+            transform: rotate(-3deg) translateY(-2px);
+        }
+
+        .logo-room {
+            background-color: #ffffff; /* Signature White */
+            color: #222222;
+            transform: rotate(4deg) translateY(1px);
+        }
+        /* ========================================= */
 
         nav a {
             color: #fff;
             text-decoration: none;
             margin-left: 1.5rem;
-            font-weight: 600;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             transition: color 0.3s ease;
         }
 
@@ -81,16 +107,19 @@
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-family: 'Bungee', sans-serif;
+            font-size: 2.8rem;
             margin-bottom: 1rem;
-            text-transform: uppercase;
+            color: #ff5722;
+            text-shadow: 3px 3px 0px #000;
         }
 
         p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             line-height: 1.6;
             margin-bottom: 2rem;
             color: #e0e0e0;
+            font-weight: 500;
         }
 
         /* Rec Room Styled Buttons */
@@ -103,9 +132,9 @@
 
         .btn {
             display: inline-block;
-            padding: 0.8rem 2rem;
-            font-size: 1rem;
-            font-weight: bold;
+            padding: 0.8rem 2.2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
             text-transform: uppercase;
             text-decoration: none;
             border-radius: 30px;
@@ -119,20 +148,20 @@
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px) scale(1.03);
             box-shadow: 0 6px 20px rgba(255, 87, 34, 0.6);
         }
 
         .btn-secondary {
             background-color: transparent;
             color: #fff;
-            border: 2px solid #fff;
+            border: 2.5px solid #fff;
         }
 
         .btn-secondary:hover {
             background-color: #fff;
             color: #000;
-            transform: translateY(-2px);
+            transform: translateY(-3px) scale(1.03);
         }
 
         /* Footer */
@@ -149,16 +178,17 @@
         @media (max-width: 600px) {
             header {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 1.2rem;
+                padding: 1.5rem 1rem;
             }
             nav a {
-                margin: 0 0.7rem;
+                margin: 0 0.5rem;
             }
             .content-card {
-                padding: 1.5rem;
+                padding: 2rem 1.5rem;
             }
             h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
         }
     </style>
@@ -166,7 +196,10 @@
 <body>
 
     <header>
-        <div class="logo">Rec<span>Room</span></div>
+        <div class="logo">
+            <span class="logo-rec">Rec</span>
+            <span class="logo-room">Room</span>
+        </div>
         <nav>
             <a href="#">Home</a>
             <a href="#">Play</a>
