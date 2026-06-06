@@ -1,1 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Development - Rec Revival</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Fredoka:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Fredoka', 'Segoe UI', sans-serif;
+        }
 
+        body {
+            /* Using your requested background image */
+            background: url('background.webp') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            padding: 0.8rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #ff5722; /* Accent Color */
+        }
+
+        /* =========================================
+           REC REVIVAL STYLIZED LOGO
+           =========================================
+        */
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-family: 'Bungee', sans-serif;
+            font-size: 1.4rem;
+            user-select: none;
+            transform: rotate(-2deg); 
+        }
+
+        .logo-rec, .logo-revival {
+            padding: 4px 12px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.4);
+        }
+
+        .logo-rec {
+            background-color: #ff5722; /* Signature Orange */
+            color: #ffffff;
+            transform: rotate(-3deg) translateY(-2px);
+        }
+
+        .logo-revival {
+            background-color: #ffffff; /* Signature White */
+            color: #222222;
+            transform: rotate(4deg) translateY(1px);
+        }
+        /* ========================================= */
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff5722;
+        }
+
+        /* Hero / Main Content Container */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        /* Glassmorphism Card for Content Readability */
+        .content-card {
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 15px;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        h1 {
+            font-family: 'Bungee', sans-serif;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: #ff5722;
+            text-shadow: 3px 3px 0px #000;
+        }
+
+        p {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #e0e0e0;
+            font-weight: 500;
+        }
+
+        /* Action Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2.2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: #ff5722;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 6px 20px rgba(255, 87, 34, 0.6);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #fff;
+            border: 2.5px solid #fff;
+        }
+
+        .btn-secondary:hover {
+            background-color: #fff;
+            color: #000;
+            transform: translateY(-3px) scale(1.03);
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #888;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 1.2rem;
+                padding: 1.5rem 1rem;
+            }
+            nav a {
+                margin: 0 0.5rem;
+            }
+            .content-card {
+                padding: 2rem 1.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <span class="logo-rec">Rec</span>
+            <span class="logo-revival">Revival</span>
+        </div>
+        <nav>
+            <a href="https://rec-room-project.github.io/RecRoom/">Home</a>
+            <a href="https://rec-room-project.github.io/RecRoom/">Play</a>
+            <a href="https://rec-room-project.github.io/RecRoom/">Community</a>
+            <a href="https://rec-room-project.github.io/RecRoom/">Shop</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-card">
+            <h1>Under Construction</h1>
+            <p>Sorry but Rec Revival is under Development. Please come back soon. You can also join the discord for updates!</p>
+            <div class="cta-buttons">
+                <a href="https://rec-room-project.github.io/RecRoom/" class="btn btn-primary">Go Back Home</a>
+                <a href="https://discord.gg/NGFJA3PFM2" target="_blank" class="btn btn-secondary">Join Discord</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Rec Revival LLC. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
